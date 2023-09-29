@@ -1,4 +1,4 @@
-import SwitchMode from "../SwitchMode"
+import SwitchMode from "../switchMode"
 
 const Header = () => {
   return (
