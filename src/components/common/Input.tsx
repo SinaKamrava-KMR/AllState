@@ -15,7 +15,7 @@ const Input = forwardRef(
   ) => {
     return (
       <div
-        className={`border p-2 border-slate-300 dark:border-slate-600 rounded w-full flex items-center gap-2 focus-within:border-blue-500 dark:focus-within:border-blue-400 relative ${className}`}
+        className={`border p-2 min-w-[200px] border-slate-300 dark:border-slate-600 rounded w-full flex items-center gap-2 focus-within:border-blue-500 dark:focus-within:border-blue-400 relative ${className}`}
       >
         <div className="text-slate-400 text-xl">{icon}</div>
         <input
