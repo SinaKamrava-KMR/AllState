@@ -10,11 +10,11 @@ const Home = () => {
     
   }
   return (
-    <div className="py-5 px-2 flex-1 flex flex-col gap-5">
+    <section className="py-5 px-2 flex-1 flex flex-col gap-5">
       <Search value={query} setValue={setQuery} />
       <CardWrapper query={query} />
       <Pagination currentPage={1} pages={3} onChange={handleChangePage} />
-    </div>
+    </section>
   );
 };
 

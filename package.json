@@ -12,6 +12,7 @@
     "server": "json-server --watch db.json --port 8000"
   },
   "dependencies": {
+    "@types/geojson": "^7946.0.11",
     "axios": "^1.5.1",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",
@@ -22,6 +23,7 @@
     "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.6",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
