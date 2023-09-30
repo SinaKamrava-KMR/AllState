@@ -17,3 +17,20 @@ type FormValues = {
   email: string,
   password:string
 };
+
+
+type User = {
+  id: number,
+  email:string,
+  password:string,
+  name:string,
+  lastName:string,
+}
+
+type ContentPropsType = {
+  children: ReactElement;
+};
+type DataContextValue = {
+  user: User;
+  setUser: React.Dispatch<React.SetStateAction<User>> | undefined;
+};
