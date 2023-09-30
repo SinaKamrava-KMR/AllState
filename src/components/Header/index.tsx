@@ -7,7 +7,7 @@ const Header = () => {
   const { user } = useDataContext();
   
   return (
-    <header className="flex w-full h-14 shadow-md dark:bg-slate-800 transition-all duration-300 px-3 md:px-10 mx-auto justify-between items-center gap-3">
+    <header className="flex w-full h-14 shadow-md bg-slate-50 dark:bg-slate-800 transition-all duration-300 px-3 md:px-10 mx-auto justify-between items-center gap-3 fixed z-10 ">
       <Logo />
       <span className="flex-1"></span>
       <SwitchMode />
