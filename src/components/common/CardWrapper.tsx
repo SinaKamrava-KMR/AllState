@@ -16,8 +16,7 @@ const CardWrapper = ({ query }: CardWrapperType) => {
       <Card />
       <Card />
       <Card />
-      <Card />
-      <Card />
+      
     </div>
   );
 };
