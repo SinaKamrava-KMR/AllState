@@ -15,6 +15,13 @@ type FormValues = {
   email: string;
   password: string;
 };
+type PostFormValues = {
+  title: string;
+  phone: number;
+  description: string;
+  address: string;
+  price: number;
+};
 
 type User = {
   id: number;
@@ -35,5 +42,5 @@ type DataContextValue = {
 type MapType = {
   position: LatLngExpression;
   dragable: boolean;
-  onChageLatLng: (value: [lat: number, lng: number]) => void;
+  onChageLatLng: (latlng:LatLngExpression) => void;
 };

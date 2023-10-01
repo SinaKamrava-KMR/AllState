@@ -9,9 +9,13 @@ import {
 } from "react-leaflet";
 import { useState } from "react";
 
+
+const ZOOM = 20;
+
+
 const customIcon = new Icon({
   iconUrl: "/public/images/marker.png",
-  iconSize: [100, 100], // Adjust the size of the icon as needed
+  iconSize: [100, 100],
 });
 
 const Map = ({
@@ -28,13 +32,13 @@ const Map = ({
     onChageLatLng([lat, lng]);
   };
 
-
+  
   return (
     <section className="flex-1 rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-800 h-full w-full">
       <MapContainer
         className="w-full h-full"
         center={position}
-        zoom={20}
+        zoom={ZOOM}
         scrollWheelZoom={true}
       >
         <TileLayer
@@ -51,10 +55,9 @@ const Map = ({
   );
 };
 
-
 function ChangePosition({ position }: { position: LatLngExpression }) {
   const map = useMap();
-  map.setView(position, 10);
+  map.setView(position, ZOOM);
   return null;
 }
 
