@@ -19,7 +19,7 @@ const customIcon = new Icon({
 });
 
 const Map = ({
-  position,
+  position=[40, 0],
   dragable = true,
   onChageLatLng = () => {},
 }: Partial<MapType>) => {
