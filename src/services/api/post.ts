@@ -33,11 +33,31 @@ export async function getPosts(params:Partial<QueryParamsType>) {
     throw new Error((e as Error).message);
   }
 }
+
+
 export async function getpostById(id:number|string) {
   try {
 
   
     const res: AxiosResponse = await publicAxios.get(`posts/${id}`);
+
+
+    if (res.status !== 200)
+      throw new Error("Something went wrong. Can't get  posts");
+
+    return res.data;
+  } catch (e) {
+    throw new Error((e as Error).message);
+  }
+}
+
+
+
+export async function deletePost(id:number|string) {
+  try {
+
+  
+    const res: AxiosResponse = await publicAxios.delete(`posts/${id}`);
 
 
     if (res.status !== 200)

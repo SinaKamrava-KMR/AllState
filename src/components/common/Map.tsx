@@ -34,13 +34,14 @@ const Map = ({
 
   
   return (
-    <section className="flex-1 rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-800 h-full w-full">
+    <section className="flex-1 rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-800 h-full w-full z-10">
+      
       <MapContainer
         className="w-full h-full"
         center={position}
         zoom={ZOOM}
-        scrollWheelZoom={true}
-      >
+        scrollWheelZoom={true}>
+        
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

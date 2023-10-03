@@ -1,20 +1,6 @@
 {
   "posts": [
     {
-      "title": "jglkg",
-      "address": "hkljhkljh",
-      "phone": "09797",
-      "description": "mgklgh",
-      "price": "708",
-      "latlng": [
-        42.85729595201373,
-        -8.560860157012941
-      ],
-      "userId": 1,
-       "userName": "sina kamrava",
-      "id": 1
-    },
-    {
       "title": "hhhhhhhhhhhhhhhhhhhhh",
       "address": "iran,tokekabon",
       "phone": "09216343118",
@@ -25,7 +11,7 @@
         -8.564529418945314
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 2
     },
     {
@@ -39,7 +25,7 @@
         0.00035941600799560547
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 3
     },
     {
@@ -66,7 +52,7 @@
         -8.560860157012941
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 5
     },
     {
@@ -80,7 +66,7 @@
         -8.564529418945314
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 6
     },
     {
@@ -94,7 +80,7 @@
         0.00035941600799560547
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 7
     },
     {
@@ -121,7 +107,7 @@
         -8.560860157012941
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 9
     },
     {
@@ -135,7 +121,7 @@
         -8.564529418945314
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 10
     },
     {
@@ -149,7 +135,7 @@
         0.00035941600799560547
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 11
     },
     {
@@ -176,7 +162,7 @@
         0.00035941600799560547
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 13
     },
     {
@@ -203,7 +189,7 @@
         -0.00029504299163818365
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 15
     },
     {
@@ -217,7 +203,7 @@
         -0.0022745132446289067
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 16
     },
     {
@@ -231,7 +217,7 @@
         0.024150609970092777
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 17
     },
     {
