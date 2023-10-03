@@ -25,6 +25,7 @@ type PostFormValues = {
 interface PostParamsType extends PostFormValues {
   userId: number;
   latlng: LatLngExpression;
+  userName:string
 }
 
 type User = {
@@ -63,10 +64,15 @@ type PostType = {
   price: number;
   latlng: [number, number];
   userId: number;
+  userName: string;
   id: number;
 };
 
 type PostResponseType = {
   posts: PostType[],
   totalPage:number
+}
+
+type DebounceType = F & {
+  callback:()=>void
 }

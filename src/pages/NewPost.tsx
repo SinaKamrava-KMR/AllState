@@ -5,19 +5,20 @@ import { useState } from "react";
 import useDataContext from "../hooks/context/useDataContext";
 import useCreatePost from "../hooks/post/useCreatePost";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const NewPost = () => {
+  const navigate = useNavigate();
   const [latlng, setLatLng] = useState<LatLngExpression | undefined>();
   const { user } = useDataContext();
   const setParams = useCreatePost(handleOnSuccess);
 
   const handleOnSubmit = (data: PostFormValues) => {
-   
     if (!latlng) {
       console.log(latlng);
-      
+
       toast.error("please set lat lng");
-    
+
       return;
     }
 
@@ -25,8 +26,8 @@ const NewPost = () => {
       ...data,
       latlng,
       userId: user.id,
+      userName:`${user.name} ${user.lastName}`
     };
-    
 
     setParams(params);
   };
@@ -35,9 +36,10 @@ const NewPost = () => {
     setLatLng(latlng);
   };
 
-  function handleOnSuccess(res:PostParamsType) {
+  function handleOnSuccess(res: PostParamsType) {
     console.log(res);
-    toast.success("post successfuly created")
+    toast.success("post successfuly created");
+    navigate("/?page=1");
   }
 
   return (

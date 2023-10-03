@@ -5,6 +5,7 @@ import Pagination from "../components/common/Pagination";
 import usePost from "../hooks/post/usePost";
 import Card from "../components/common/CardItem";
 import { useSearchParams } from "react-router-dom";
+import { withDebounce } from "../utils/helper";
 
 const Home = () => {
   const [query, setQuery] = useState<string>("");
@@ -12,13 +13,16 @@ const Home = () => {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    setParams({
-      address_like: query,
-      _page: searchParams.get("page") || 1,
-      _limit: 12,
-    });
+    withDebounce(() => {
+      setParams({ address_like: query, _limit: 12 });
+    }, 2000)();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query, searchParams.get("page")]);
+  }, [query]);
+
+  useEffect(() => {
+    setParams((p) => ({ ...p, _page: searchParams.get("page") || 1 }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams.get("page")]);
 
   return (
     <section className="py-5 px-2 flex-1 flex flex-col gap-5">
