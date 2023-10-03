@@ -1,22 +1,14 @@
-import Card from "./CardItem";
+import {  ReactNode } from "react";
 
 type CardWrapperType = {
-  query: string;
+  children:ReactNode
 };
-const CardWrapper = ({ query }: CardWrapperType) => {
-  console.log(query);
+
+const CardWrapper = ({ children }: CardWrapperType) => {
 
   return (
     <div className="grid grid-cols-responsive-cols auto-rows-min h-full  gap-3 flex-1">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      
+      {children}
     </div>
   );
 };

@@ -4,12 +4,12 @@ import { loginApi } from "../services/api/auth";
 import { ACCESS_TOKEN } from "../configs/constance";
 import useDataContext from "../hooks/context/useDataContext";
 import LoginPresentational from "../components/login/LoginPresentational";
-
+import toast from "react-hot-toast";
 
 const Login = () => {
   const navigate = useNavigate();
-  const {setUser} =useDataContext();
-  
+  const { setUser } = useDataContext();
+
   const {
     register,
     formState: { errors },
@@ -22,18 +22,20 @@ const Login = () => {
       localStorage.setItem(ACCESS_TOKEN, res.accessToken);
       setUser?.(res.user);
       navigate("/", { replace: true });
+      toast.success("You are successfully login")
     } catch (error) {
       console.log(error);
+      toast.error("Something went wrong !!!")
     }
   };
 
   return (
     <LoginPresentational
-    onSubmit={handleSubmit(onSubmit)}
-    errors={errors}
-    register={register}
-  />
-  )
-}
+      onSubmit={handleSubmit(onSubmit)}
+      errors={errors}
+      register={register}
+    />
+  );
+};
 
-export default Login
+export default Login;

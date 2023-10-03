@@ -3,7 +3,7 @@ import axios, {
   AxiosInstance,
   InternalAxiosRequestConfig,
 } from "axios";
-import { BASE_URL } from "../../configs/constance";
+import { ACCESS_TOKEN, BASE_URL } from "../../configs/constance";
 
 const privateAxios: AxiosInstance = axios.create({
   baseURL: BASE_URL,
@@ -13,6 +13,10 @@ const privateAxios: AxiosInstance = axios.create({
 const onRequest = (
   config: InternalAxiosRequestConfig
 ): InternalAxiosRequestConfig => {
+  const accessToken = localStorage.getItem(ACCESS_TOKEN) || "";
+  if (accessToken) {
+    config.headers.Authorization = accessToken
+  }
   return config;
 };
 

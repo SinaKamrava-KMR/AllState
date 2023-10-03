@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { signupApi } from "../services/api/auth";
 import { ACCESS_TOKEN } from "../configs/constance";
 import useDataContext from "../hooks/context/useDataContext";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -20,9 +21,11 @@ const Signup = () => {
       const res = await signupApi(data);
       localStorage.setItem(ACCESS_TOKEN, res.accessToken);
       setUser?.(res.user);
+      toast.success("You are successfully Signup")
       navigate("/", { replace: true });
     } catch (error) {
       console.log(error);
+      toast.error("Something went wrong ! try again")
     }
   };
 
