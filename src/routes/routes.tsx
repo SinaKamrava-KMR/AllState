@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Post from "../pages/Post";
 import NewPost from "../pages/NewPost";
+import PrivateRoute from "../components/protectedRoute/PrivateRoute";
 
 const routes = createBrowserRouter([
   {
@@ -16,19 +17,23 @@ const routes = createBrowserRouter([
       },
       {
         path: "/login",
-        element:<Login/>
+        element: <Login />,
       },
       {
         path: "/signup",
-        element:<Signup/>
+        element: <Signup />,
       },
       {
         path: "/post/:id",
-        element:<Post/>
+        element: <Post />,
       },
       {
         path: "/newpost",
-        element:<NewPost/>
+        element: (
+          <PrivateRoute>
+            <NewPost />
+          </PrivateRoute>
+        ),
       },
     ],
   },

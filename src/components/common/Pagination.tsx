@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { HiChevronLeft,HiChevronRight } from "react-icons/hi";
+import { useSearchParams } from "react-router-dom";
 type PaginationType = {
   pages: number;
   currentPage: number;
-  onChange: (value: number) => void;
+  // onChange: (value: number) => void;
 };
 
-const Pagination = ({ currentPage = 1, pages, onChange }: PaginationType) => {
+const Pagination = ({ currentPage = 1, pages }: PaginationType) => {
   const [pagePosition, setPagePosition] = useState<number>(currentPage);
+  const [searchParams, setSearchParams] = useSearchParams();
   const pagesList: number[] = Array.from(
     { length: pages },
     (_, idx) => idx + 1
@@ -15,12 +17,16 @@ const Pagination = ({ currentPage = 1, pages, onChange }: PaginationType) => {
 
   const handleOnPrevPage = (): void => {
     const page = pagePosition > 1 ? pagePosition - 1 : pagePosition;
-    onChange(page);
+    // onChange(page);
+    searchParams.set("page", page.toString());
+    setSearchParams(searchParams)
     setPagePosition(page);
   };
   const handleOnNextPage = (): void => {
     const page = pagePosition < pages ? pagePosition + 1 : pagePosition;
-    onChange(page);
+    // onChange(page);
+    searchParams.set("page", page.toString());
+    setSearchParams(searchParams)
     setPagePosition(page);
   };
 

@@ -23,8 +23,8 @@ type PostFormValues = {
   price: number;
 };
 interface PostParamsType extends PostFormValues {
-  userId: number,
-  latlng:LatLngExpression
+  userId: number;
+  latlng: LatLngExpression;
 }
 
 type User = {
@@ -46,5 +46,27 @@ type DataContextValue = {
 type MapType = {
   position: LatLngExpression;
   dragable: boolean;
-  onChageLatLng: (latlng:LatLngExpression) => void;
+  onChageLatLng: (latlng: LatLngExpression) => void;
 };
+
+type QueryParamsType = {
+  address_like: string;
+  _limit: number;
+  _page: number | string;
+};
+
+type PostType = {
+  title: string;
+  address: string;
+  phone: number;
+  description: string;
+  price: number;
+  latlng: [number, number];
+  userId: number;
+  id: number;
+};
+
+type PostResponseType = {
+  posts: PostType[],
+  totalPage:number
+}
