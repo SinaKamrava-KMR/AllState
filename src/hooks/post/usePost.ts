@@ -7,7 +7,7 @@ export default function usePost() {
     _limit: 12,
   });
   const [posts, setPosts] = useState<PostResponseType>();
-
+ 
   useEffect(() => {
     const handleRequest = async (params: Partial<QueryParamsType>) => {
       try {
@@ -19,6 +19,8 @@ export default function usePost() {
       }
     };
     handleRequest(params);
+
+   
   }, [params]);
 
   // handleRequest(params);
