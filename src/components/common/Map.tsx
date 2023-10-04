@@ -24,7 +24,7 @@ const Map = ({
   onChageLatLng = () => {},
 }: Partial<MapType>) => {
 
-  
+
   const [mapPosition, setMapPosition] = useState<LatLngExpression>(position);
   const handleChangePosition = (e: LeafletMouseEvent) => {
     const { lat, lng } = e.latlng;
@@ -34,19 +34,17 @@ const Map = ({
 
   
   // useEffect(() => {
-  //   if (!position) {
+  
   //     setMapPosition(position)
-  //   }
     
   // },[position])
 
   
   return (
     <section className="flex-1 rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-800 h-full w-full z-10">
-      
       <MapContainer
         className="w-full h-full"
-        center={position}
+        center={mapPosition}
         zoom={ZOOM}
         scrollWheelZoom={true}>
         

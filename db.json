@@ -241,8 +241,8 @@
       "description": "I want to clear my leaflet map by clicking a button...how to do this... I want to clear all drawed shapes on the map, so the map to be clear\n\nThis is my code of the leaflet map in the return statement:",
       "price": "78000",
       "latlng": [
-        37.27852416557618,
-        49.58900194563243
+        37.27541025197376,
+        49.59363094279361
       ],
       "userId": 2,
       "userName": "Yaser Sadri",
