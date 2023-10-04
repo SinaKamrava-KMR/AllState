@@ -2,16 +2,17 @@ import { useForm } from "react-hook-form";
 import PostFormPresentaion from "./PostFormPresentaion";
 
 type PostType = {
-  onSubmit:(data:PostFormValues)=>void
+  onSubmit: (data: PostFormValues) => void;
+  init?:PostFormValues
 }
 
 
-const PostForm = ({onSubmit}:PostType) => {
+const PostForm = ({onSubmit,init}:PostType) => {
   const {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm<PostFormValues>();
+  } = useForm<PostFormValues>({defaultValues:init});
  
   return (
     <PostFormPresentaion

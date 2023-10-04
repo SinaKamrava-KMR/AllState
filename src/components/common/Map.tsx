@@ -7,7 +7,7 @@ import {
   Popup,
   useMapEvent,
 } from "react-leaflet";
-import { useState } from "react";
+import {useState } from "react";
 
 
 const ZOOM = 20;
@@ -19,7 +19,7 @@ const customIcon = new Icon({
 });
 
 const Map = ({
-  position=[40, 0],
+  position=[45,10],
   dragable = true,
   onChageLatLng = () => {},
 }: Partial<MapType>) => {
@@ -33,14 +33,21 @@ const Map = ({
   };
 
   
+  // useEffect(() => {
+  
+  //     setMapPosition(position)
+    
+  // },[position])
+
+  
   return (
-    <section className="flex-1 rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-800 h-full w-full">
+    <section className="flex-1 rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-800 h-full w-full z-10">
       <MapContainer
         className="w-full h-full"
-        center={position}
+        center={mapPosition}
         zoom={ZOOM}
-        scrollWheelZoom={true}
-      >
+        scrollWheelZoom={true}>
+        
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

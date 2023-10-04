@@ -36,8 +36,7 @@ const NewPost = () => {
     setLatLng(latlng);
   };
 
-  function handleOnSuccess(res: PostParamsType) {
-    console.log(res);
+  function handleOnSuccess() {
     toast.success("post successfuly created");
     navigate("/?page=1");
   }

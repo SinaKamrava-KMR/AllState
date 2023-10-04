@@ -1,45 +1,31 @@
 {
   "posts": [
     {
-      "title": "jglkg",
-      "address": "hkljhkljh",
-      "phone": "09797",
-      "description": "mgklgh",
-      "price": "708",
-      "latlng": [
-        42.85729595201373,
-        -8.560860157012941
-      ],
-      "userId": 1,
-       "userName": "sina kamrava",
-      "id": 1
-    },
-    {
-      "title": "hhhhhhhhhhhhhhhhhhhhh",
-      "address": "iran,tokekabon",
+      "title": "frooshi",
+      "address": "rasht",
       "phone": "09216343118",
       "description": "kxjhgskgaflkjabvxvbkdlghakgjhagkljsdhfgklsjgsklfghslkfgSFKLJsfklSGFKLJFHSKLJGHSkjghSKHSKJshksjhgsklgskfhsgk",
-      "price": "98",
+      "price": "405000",
       "latlng": [
-        42.86100408154215,
-        -8.564529418945314
+        42.86243536783473,
+        -8.563258251107843
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 2
     },
     {
-      "title": "kdsjhsdfkjh",
-      "address": "iran",
-      "phone": "0988",
-      "description": "mghkljh",
-      "price": "98",
+      "title": "Sinaaaaaaaaa",
+      "address": "ramsar",
+      "phone": "09214363118",
+      "description": ",shkbvgawoigaeoitritwvuI",
+      "price": "1000000",
       "latlng": [
-        39.999244732722744,
-        0.00035941600799560547
+        40.00243973830069,
+        -0.002281628445337525
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 3
     },
     {
@@ -66,7 +52,7 @@
         -8.560860157012941
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 5
     },
     {
@@ -80,7 +66,7 @@
         -8.564529418945314
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 6
     },
     {
@@ -94,7 +80,7 @@
         0.00035941600799560547
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 7
     },
     {
@@ -121,21 +107,21 @@
         -8.560860157012941
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 9
     },
     {
       "title": "hhhhhhhhhhhhhhhhhhhhh",
       "address": "iran,tokekabon",
       "phone": "09216343118",
-      "description": "kxjhgskgaflkjabvxvbkdlghakgjhagkljsdhfgklsjgsklfghslkfgSFKLJsfklSGFKLJFHSKLJGHSkjghSKHSKJshksjhgsklgskfhsgk",
-      "price": "98",
+      "description": "weeeeeeeeeeeeeeeeeeeeeee",
+      "price": "100",
       "latlng": [
-        42.86100408154215,
-        -8.564529418945314
+        42.863776185605694,
+        -8.567525772663217
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 10
     },
     {
@@ -149,7 +135,7 @@
         0.00035941600799560547
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 11
     },
     {
@@ -176,7 +162,7 @@
         0.00035941600799560547
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 13
     },
     {
@@ -203,7 +189,7 @@
         -0.00029504299163818365
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 15
     },
     {
@@ -217,7 +203,7 @@
         -0.0022745132446289067
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 16
     },
     {
@@ -231,7 +217,7 @@
         0.024150609970092777
       ],
       "userId": 1,
-       "userName": "sina kamrava",
+      "userName": "sina kamrava",
       "id": 17
     },
     {
@@ -247,6 +233,20 @@
       "userId": 1,
       "userName": "sina kamrava",
       "id": 18
+    },
+    {
+      "title": "How to clear leaflet map in reactjs by button?",
+      "address": "rasht",
+      "phone": "097978977",
+      "description": "I want to clear my leaflet map by clicking a button...how to do this... I want to clear all drawed shapes on the map, so the map to be clear\n\nThis is my code of the leaflet map in the return statement:",
+      "price": "78000",
+      "latlng": [
+        37.27541025197376,
+        49.59363094279361
+      ],
+      "userId": 2,
+      "userName": "Yaser Sadri",
+      "id": 19
     }
   ]
 }

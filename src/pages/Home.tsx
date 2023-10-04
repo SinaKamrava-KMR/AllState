@@ -13,9 +13,16 @@ const Home = () => {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    withDebounce(() => {
+    if (query.length > 0) {
+      withDebounce(() => {
+        setParams({ address_like: query, _limit: 12 });
+      }, 1000)();
+    } else {
       setParams({ address_like: query, _limit: 12 });
-    }, 2000)();
+    }
+
+
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
