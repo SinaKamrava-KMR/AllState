@@ -7,7 +7,7 @@ import {
   Popup,
   useMapEvent,
 } from "react-leaflet";
-import { useState } from "react";
+import {useState } from "react";
 
 
 const ZOOM = 20;
@@ -19,18 +19,26 @@ const customIcon = new Icon({
 });
 
 const Map = ({
-  position=[40, 0],
+  position=[45,10],
   dragable = true,
   onChageLatLng = () => {},
 }: Partial<MapType>) => {
 
-
+  
   const [mapPosition, setMapPosition] = useState<LatLngExpression>(position);
   const handleChangePosition = (e: LeafletMouseEvent) => {
     const { lat, lng } = e.latlng;
     setMapPosition([lat, lng]);
     onChageLatLng([lat, lng]);
   };
+
+  
+  // useEffect(() => {
+  //   if (!position) {
+  //     setMapPosition(position)
+  //   }
+    
+  // },[position])
 
   
   return (

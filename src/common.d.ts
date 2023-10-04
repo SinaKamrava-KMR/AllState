@@ -23,6 +23,7 @@ type PostFormValues = {
   price: number;
 };
 interface PostParamsType extends PostFormValues {
+  id?: number | string;
   userId: number;
   latlng: LatLngExpression;
   userName:string

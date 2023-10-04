@@ -5,6 +5,7 @@ import { getpostById } from "../../services/api/post";
 export default function usePostById(id:number|string) {
 
   const [post, setpost] = useState<PostType>();
+  const [reset, setReset] = useState<boolean>(false);
 
   useEffect(() => {
     const handleRequest = async () => {
@@ -16,8 +17,8 @@ export default function usePostById(id:number|string) {
       }
     };
     handleRequest();
-  }, [id]);
+  }, [id,reset]);
 
 
-  return { post };
+  return { post ,setReset};
 }

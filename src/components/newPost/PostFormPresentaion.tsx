@@ -14,7 +14,7 @@ type PropsType = {
 const PostFormPresentaion = ({ register, errors, onSubmit }: PropsType) => {
   return (
     <div className="flex-1 md:flex-grow-0 md:min-w-[450px] overflow-y-auto items-center py-3 px-5 flex flex-col gap-5 ">
-      <h1 className="text-xl font-bold">New Post Infortmation</h1>
+      <h1 className="text-xl font-bold">Post Infortmation</h1>
       <Form onSubmit={onSubmit} className="w-full flex-1 gap-6 flex flex-col ">
 
       <Input

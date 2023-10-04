@@ -7,13 +7,23 @@ import DeletePost from "../common/DeletePost";
 import { deletePost } from "../../services/api/post";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
+import EditPost from "../common/EditPost";
+import useUpdatePost from "../../hooks/post/useUpdatePost";
 type PropsType = {
   data: PostType;
+  reset:(res:PostType)=>void
 };
-const PostContent = ({ data }: PropsType) => {
+const PostContent = ({ data,reset }: PropsType) => {
   const [openEdit, setOpenEdit] = useState<boolean>(false);
   const [openDelete, setOpenDelete] = useState<boolean>(false);
   const navigate = useNavigate();
+  const {setParams} = useUpdatePost(handleOnSuccess)
+
+  function handleOnSuccess(res:PostType) {
+    toast.success("post successfuly updated");
+    setOpenEdit(false)
+    reset(res)
+  }
 
   const handleDeletePost =  () => {
     deletePost(data.id).then(() => {
@@ -24,12 +34,16 @@ const PostContent = ({ data }: PropsType) => {
     })
   }
 
+  const handleEditPost = (data:Partial<PostParamsType>) => {
+    console.log(data);
+    setParams(data as PostType)
+  }
   
   return (
     <section className="flex-1 flex flex-col items-center py-5 gap-2 md:gap-5">
       {openEdit && (
         <WithModal>
-          <p className="bg-slate-50">Editting</p>
+         <EditPost onClick={handleEditPost} onCancel={()=>setOpenEdit(false)} post={data}/>
         </WithModal>
       )}
       {openDelete && (

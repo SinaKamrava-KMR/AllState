@@ -68,3 +68,18 @@ export async function deletePost(id:number|string) {
     throw new Error((e as Error).message);
   }
 }
+
+
+export async function updatePost(params: PostType):Promise<PostType> {
+  try {
+    const res: AxiosResponse = await privateAxios.patch(`posts/${params.id}`, params);
+   
+    
+    if (res.status !== 200)
+      throw new Error("Something went wrong. Can't Update The post");
+
+    return res.data;
+  } catch (e) {
+    throw new Error((e as Error).message);
+  }
+}
